@@ -8,7 +8,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
-public class YaTranslateTests extends TestBase{
+public class KinopoiskTests extends TestBase{
 
     @ValueSource(strings = {"Пацаны", "Офис"})
     @ParameterizedTest(name = "При вводе в поле поиска фильма {0} в результатах на первом месте отображается {0}")
