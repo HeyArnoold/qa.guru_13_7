@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group 'guru.qa'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    testImplementation (
+            'org.junit.jupiter:junit-jupiter:5.8.2',
+            'com.google.guava:guava:31.1-jre',
+            'com.codeborne:selenide:6.5.1',
+            'org.slf4j:slf4j-simple:1.7.36'
+    )
+}
+
+test {
+    useJUnitPlatform()
+}
